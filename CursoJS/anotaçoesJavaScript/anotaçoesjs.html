@@ -1,0 +1,102 @@
+<!-- teste de github
+ 
+
+Anotações das aulas de java script do curso em video
+
+todo comando de javascript deve ser feito entre o codigo <script> </script>
+
+/////////Aula 4 – Criando o seu primeiro script\\\\\\\\\\
+
+<script>
+        window.alert('minha primeira mensagem')
+    </script>
+(janela de aviso, codigo que faz aparecer um aviso antes de entrar de fato na guia desejada)
+----------------------------------
+window.confirm('esta gostando de JS?')
+(codigo para confirmar algo)
+----------------------------------
+window.prompt('qual seu nome?')
+(codigo para responder algo)
+----------------------------------
+window.alert(codigos que aparecem na janela, por isso window).
+ 
+---------------------------------
+///////Aula 5 – Variáveis e Tipos Primitivos\\\\\\\\\\\
+
+number > infinity , NaN
+string
+boolean
+null
+undefined
+object > array
+function
+
+typeof (tipo de)
+ex: n=200
+typeof n
+number
+
+ex: n='google'
+typeof n
+string
+
+(no caso pergunta-se ao terminal, qual o tipo primitivo de n)
+---------------------------------
+////////////Aula 6 – Tratamento de dados\\\\\\\\\\\\
+
+var nome = window.prompt('qual seu nome?')
+
+        window.alert('é um prazer te conhecer, ' +nome)
+
+(a variavel nome vai receber o valor que voce digitar, e sera exibida em seguida com a mensagem)
+
+xxxxxxxxx
+number.parseInt(n) conversao de numero para numero inteiro
+
+number.parseFloat(n) de numero para real(numeros com virgula)
+
+ex:
+var n1 = Number.parseFloat(window.prompt('digite um numero?'))
+
+var n2 = Number.parseFloat(window.prompt('digite outro numero'))
+
+var s=n1+n2
+
+window.alert('a soma dos numeros é' +s)
+
+(convertemos os numeros que digitamos para as variaveis n1 e n2, para sejam tipo primitivo float)
+
+
+Tambem pode-se o usar para ficar mais pratico o 'Number' em vez de Number.parse
+ex:
+var n1 = Number(window.prompt('digite um numero?'))
+
+var n2 = Number(window.prompt('digite outro numero'))
+
+var s=n1+n2
+
+window.alert('a soma dos numeros é' +s)
+
+A mesma coisa serve para string, no caso String(n) ou n.toString
+
+xxxxxxxxx
+Pra ser mais facil, pode-se usar apenas ${variavel} no lugar de +variavel, mas deve-se escrever a frase entre crase ` `
+ex:
+var n1 = Number(window.prompt(`digite um numero`))
+
+        var n2 = Number(window.prompt(`digite outro numero`))
+
+        var s = n1 + n2
+
+        window.alert(` a soma entre ${n1} e ${n2} é de ${s}`)
+
+
+
+
+
+
+
+
+
+
+-->
