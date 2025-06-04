@@ -1,4 +1,15 @@
 <!-- teste de github
+COMANDOS AVULSOS:
+window.alert()- Exibe uma mensagem de alerta ao usuário.
+
+window.prompt()- Exibe uma caixa de entrada onde o usuário pode digitar um valor.
+
+window.confirm()- Exibe uma caixa de diálogo com uma pergunta e botões "OK" e "Cancelar".
+
+document.write()- Escreve diretamente no documento HTML.
+
+
+
  
 Anotações das aulas de java script do curso em video
 
@@ -47,6 +58,8 @@ string
 ---------------------------------
 ////////////////////////////////////////////////////
 ////////////Aula 6 – Tratamento de dados\\\\\\\\\\\\
+
+use bastante template strings, que são strings com crase ` `, e dentro delas você pode usar ${variavel} para exibir o valor da variável.
 
 🔹 1. Tipos de Dados em JavaScript
 ✅ Primitivos:
@@ -114,6 +127,14 @@ var nome = window.prompt('qual seu nome?')
 
 xxxxxxxxx
 ----------------------------------------
+O document.write() é um método do JavaScript que permite escrever diretamente no documento HTML.
+
+✅ Inserindo elementos HTML:
+document.write("<h1>Bem-vindo!</h1>");
+document.write("<p>Este é um parágrafo gerado via JavaScript.</p>");
+Isso cria um título <h1> e um parágrafo <p> na página.
+
+
 number.parseInt(n) conversao de NUMERO para NUMERO INTEIRO
 
 number.parseFloat(n) de NUMERO para REAL(numeros com virgula)
@@ -153,6 +174,177 @@ var n1 = Number(window.prompt(`digite um numero`))
 
         window.alert(` a soma entre ${n1} e ${n2} é de ${s}`)
 -------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+-------------------------------------------------
+-------------------------------------------
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+JavaScript – Anotações Estruturadas
+
+🔹 Comandos Básicos
+Os comandos a seguir são usados para interação com o usuário:
+
+window.alert() → Exibe uma mensagem de alerta.
+
+window.prompt() → Abre um campo de entrada para o usuário digitar um valor.
+
+window.confirm() → Abre uma caixa de diálogo com botões "OK" e "Cancelar".
+
+document.write() → Escreve diretamente no documento HTML.
+
+✅ Exemplo de uso:
+
+window.alert("Minha primeira mensagem!");
+window.confirm("Está gostando de JavaScript?");
+window.prompt("Qual seu nome?");
+document.write("<h1>Bem-vindo!</h1>");
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+🔹 Estrutura do Código JavaScript
+Todo comando JavaScript deve estar dentro da tag <script> no HTML:
+html
+<script>
+    window.alert("Exemplo dentro do script");
+</script>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+📌 Aula 5 – Variáveis e Tipos Primitivos
+🔹 Tipos de dados em JavaScript
+✅ Primitivos:
+
+Number → Números (let num = 42;)
+
+String → Textos (let nome = "Pedro";)
+
+Boolean → Verdadeiro/Falso (let ativo = true;)
+
+Null → Valor nulo (let vazio = null;)
+
+Undefined → Valor indefinido (let valor;)
+
+✅ Estruturados:
+
+Array → Lista de valores (let lista = [1, 2, 3];)
+
+Object → Estrutura de chave-valor (let pessoa = { nome: "Ana", idade: 25 };)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+📌 Aula 6 – Tratamento de Dados
+🔹 Conversão de Tipos
+
+✅ String → Número:
+let num = Number("42"); // Converte "42" para número 42
+
+✅ Número → String:
+let texto = String(42); // Converte 42 para "42"
+
+✅ Conversão automática:
+console.log("5" + 3); // "53" (concatenação)
+console.log("5" * 3); // 15 (conversão automática)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+🔹 Manipulação de Strings
+✅ Transformação de texto:
+let nome = "Pedro";
+console.log(nome.toUpperCase()); // "PEDRO"
+console.log(nome.toLowerCase()); // "pedro"
+console.log(nome.length); // 5 caracteres
+
+✅ Template Strings (${variavel}) Uso de crase (` ``) para facilitar manipulação de textos:
+let nome = "Lucas";
+console.log(`Olá, ${nome}! Seja bem-vindo.`);
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+🔹 Formatação de Números
+✅ Arredondando valores:
+let preco = 199.99;
+console.log(preco.toFixed(2)); // "199.99" (duas casas decimais)
+
+✅ Convertendo para moeda brasileira:
+console.log(preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }));
+// "R$ 199,99"
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+📌 Manipulação de Arrays
+Arrays armazenam múltiplos valores e possuem métodos úteis.
+
+✅ Adicionar elementos:
+let lista = ["Xbox", "PS5"];
+lista.push("PC"); // Adiciona "PC" ao final
+console.log(lista); // ["Xbox", "PS5", "PC"]
+
+✅ Remover elementos:
+lista.pop(); // Remove o último item
+console.log(lista); // ["Xbox", "PS5"]
+
+✅ Filtrar elementos:
+let numeros = [10, 20, 30, 40];
+let maioresQue20 = numeros.filter(num => num > 20);
+console.log(maioresQue20); // [30, 40]
+
+📌 Uso do document.write()
+✅ Inserindo elementos HTML:
+document.write("<h1>Bem-vindo!</h1>");
+document.write("<p>Este é um parágrafo gerado via JavaScript.</p>");
+🚨 Atenção: Se usado após a página carregar, ele apaga todo o conteúdo existente.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+📌 Conversão de Números
+✅ Número inteiro (parseInt):
+let inteiro = Number.parseInt("10.5");
+console.log(inteiro); // 10
+
+✅ Número decimal (parseFloat):
+let real = Number.parseFloat("10.5");
+console.log(real); // 10.5
+
+✅ Forma simplificada (Number):
+let numero = Number("10.5");
+console.log(numero); // 10.5
+
+📌 Exemplo Prático – Capturando Entrada do Usuário
+✅ Capturando valores via window.prompt():
+var nome = window.prompt("Qual seu nome?");
+window.alert(`É um prazer te conhecer, ${nome}!`);
+
+✅ Realizando somas com valores digitados:
+var n1 = Number(window.prompt("Digite um número"));
+var n2 = Number(window.prompt("Digite outro número"));
+var s = n1 + n2;
+window.alert(`A soma entre ${n1} e ${n2} é de ${s}`);
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
