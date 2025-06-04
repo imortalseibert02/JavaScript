@@ -48,6 +48,64 @@ string
 ////////////////////////////////////////////////////
 ////////////Aula 6 – Tratamento de dados\\\\\\\\\\\\
 
+🔹 1. Tipos de Dados em JavaScript
+✅ Primitivos:
+Number → Números inteiros e decimais (let num = 42;)
+String → Textos (let nome = "Pedro";)
+Boolean → Verdadeiro ou falso (let ativo = true;)
+Null → Valor nulo (let vazio = null;)
+Undefined → Variável sem valor definido (let valor;)
+
+✅ Estruturados:
+Array → Lista de valores (let lista = [1, 2, 3];)
+Object → Estrutura de chave-valor (let pessoa = { nome: "Ana", idade: 25 };)
+
+🔹 2. Conversão de Tipos
+✅ String → Número:
+let num = Number("42"); // Converte "42" para número 42
+
+✅ Número → String:
+let texto = String(42); // Converte 42 para "42"
+
+✅ Conversão automática ocorre em operações matemáticas:
+console.log("5" + 3); // Saída: "53" (concatenação)
+console.log("5" * 3); // Saída: 15 (conversão automática para número)
+
+🔹 3. Manipulação de Strings
+✅ Para maiúsculas:
+let nome = "Pedro";
+console.log(nome.toUpperCase()); // "PEDRO"
+
+✅ Para minúsculas:
+console.log(nome.toLowerCase()); // "pedro"
+
+✅ Tamanho da string:
+console.log(nome.length); // 5 caracteres
+
+🔹 4. Formatação de Números
+Podemos formatar valores monetários:
+let preco = 199.99;
+console.log(preco.toFixed(2)); // "199.99" (duas casas decimais)
+console.log(preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }));
+// "R$ 199,99"
+
+🔹 5. Manipulação de Arrays
+Arrays armazenam múltiplos valores e possuem métodos úteis:
+✅ Adicionar elementos:
+let lista = ["Xbox", "PS5"];
+lista.push("PC"); // Adiciona "PC" ao final
+console.log(lista); // ["Xbox", "PS5", "PC"]
+
+✅ Remover elementos:
+lista.pop(); // Remove o último item
+console.log(lista); // ["Xbox", "PS5"]
+
+✅ Filtrar elementos:
+let numeros = [10, 20, 30, 40];
+let maioresQue20 = numeros.filter(num => num > 20);
+console.log(maioresQue20); // [30, 40]
+
+
 var nome = window.prompt('qual seu nome?')
 
         window.alert('é um prazer te conhecer, ' +nome)
@@ -55,9 +113,10 @@ var nome = window.prompt('qual seu nome?')
 (a variavel nome vai receber o valor que voce digitar, e sera exibida em seguida com a mensagem)
 
 xxxxxxxxx
-number.parseInt(n) conversao de numero para numero inteiro
+----------------------------------------
+number.parseInt(n) conversao de NUMERO para NUMERO INTEIRO
 
-number.parseFloat(n) de numero para real(numeros com virgula)
+number.parseFloat(n) de NUMERO para REAL(numeros com virgula)
 
 ex:
 var n1 = Number.parseFloat(window.prompt('digite um numero?'))
@@ -69,7 +128,7 @@ var s=n1+n2
 window.alert('a soma dos numeros é' +s)
 
 (convertemos os numeros que digitamos para as variaveis n1 e n2, para sejam tipo primitivo float)
-
+------------------------------------------
 
 Tambem pode-se o usar para ficar mais pratico o 'Number' em vez de Number.parse
 ex:
@@ -82,7 +141,7 @@ var s=n1+n2
 window.alert('a soma dos numeros é' +s)
 
 A mesma coisa serve para string, no caso String(n) ou n.toString
-
+-----------------------------------------------
 xxxxxxxxx
 Pra ser mais facil, pode-se usar apenas ${variavel} no lugar de +variavel, mas deve-se escrever a frase entre crase ` `
 ex:
@@ -93,7 +152,7 @@ var n1 = Number(window.prompt(`digite um numero`))
         var s = n1 + n2
 
         window.alert(` a soma entre ${n1} e ${n2} é de ${s}`)
-
+-------------------------------------------------
 
 
 
