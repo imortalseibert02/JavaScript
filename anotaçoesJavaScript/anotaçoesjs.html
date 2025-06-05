@@ -625,7 +625,97 @@ console.log(resultado); // 30 (Soma ocorre primeiro)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!
 Módulo C: Entendendo o DOM
+Aula 9 – Introdução ao DOM
 
+O DOM é uma interface que permite ao JavaScript acessar e manipular elementos HTML e XML de uma página web. Ele representa a estrutura do documento como uma árvore de nós, onde cada elemento pode ser modificado dinamicamente.
+
+🔹 1. O que é o DOM?
+✅ O DOM é uma representação estruturada do documento HTML. ✅ Ele permite que JavaScript altere elementos, estilos e eventos da página. ✅ Cada elemento HTML é tratado como um objeto dentro do DOM.
+
+🔹 Exemplo de estrutura DOM:
+
+html
+<html>
+  <head>
+    <title>Meu Site</title>
+  </head>
+  <body>
+    <h1 id="titulo">Bem-vindo!</h1>
+    <p class="texto">Este é um exemplo de DOM.</p>
+  </body>
+</html>
+✅ O navegador transforma esse código em uma árvore DOM, onde cada elemento pode ser acessado e manipulado.
+
+🔹 2. Árvore DOM – Estrutura Hierárquica
+O DOM é organizado como uma árvore, onde cada elemento HTML é um nó.
+
+✅ Estrutura básica:
+- window
+  |── document
+      ├── html
+          ├── head
+          │   ├── title
+          |
+          ├── body
+              ├── h1 (id="titulo")
+              ├── p (class="texto")
+
+✅ Elementos principais:
+window → Representa a janela do navegador.
+
+document → Representa o documento HTML.
+
+html → Elemento raiz da página.
+
+head e body → Contêm os elementos visíveis e metadados.
+
+🔹 Cada elemento pode ter:
+Pai (parent) → Elemento que contém outros elementos.
+
+Filho (child) → Elementos dentro de outro elemento.
+
+Irmão (sibling) → Elementos no mesmo nível.
+
+🔹 3. Seletores DOM – Como acessar elementos?
+O JavaScript oferece vários métodos para selecionar elementos do DOM:
+
+✅ Por ID (getElementById)
+Seleciona um elemento pelo seu ID único.
+let titulo = document.getElementById("titulo");
+titulo.style.color = "blue"; // Altera a cor do título
+
+✅ Por Classe (getElementsByClassName)
+Seleciona todos os elementos que possuem uma determinada classe.
+let textos = document.getElementsByClassName("texto");
+textos[0].style.fontSize = "20px"; // Altera o tamanho do primeiro elemento
+
+✅ Por Nome (getElementsByName)
+Seleciona elementos pelo atributo name.
+let inputs = document.getElementsByName("usuario");
+console.log(inputs.length); // Exibe quantos elementos possuem esse nome
+
+✅ Por Tag (getElementsByTagName)
+Seleciona todos os elementos de uma determinada tag.
+let paragrafos = document.getElementsByTagName("p");
+paragrafos[0].style.color = "red"; // Altera a cor do primeiro parágrafo
+
+✅ Por Seletor (querySelector e querySelectorAll)
+Seleciona elementos usando CSS selectors.
+let titulo = document.querySelector("#titulo"); // Seleciona pelo ID
+let textos = document.querySelectorAll(".texto"); // Seleciona todos os elementos com a classe "texto"
+
+🔹 4. Manipulação do DOM – Alterando Elementos
+✅ Modificando conteúdo (innerText e innerHTML)
+document.getElementById("titulo").innerText = "Novo Título!";
+document.getElementById("titulo").innerHTML = "<strong>Novo Título!</strong>";
+
+✅ Alterando estilos (style)
+document.getElementById("titulo").style.color = "green";
+
+✅ Adicionando eventos (addEventListener)
+document.getElementById("titulo").addEventListener("click", function() {
+  alert("Título clicado!");
+});
 
 
 
