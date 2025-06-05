@@ -243,6 +243,83 @@ if (numero % 2 === 0) {
 } else {
     console.log("Número ímpar");
 }
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+aula 8 – Operadores (Parte 2)
+🔹 1. Operadores Relacionais
+Os operadores relacionais são usados para comparar dois valores e retornam um resultado booleano (true ou false).
+
+✅ Maior que (>) → Retorna true se o primeiro valor for maior que o segundo.
+console.log(10 > 5); // true
+
+✅ Menor que (<) → Retorna true se o primeiro valor for menor que o segundo.
+console.log(10 < 5); // false
+
+✅ Maior ou igual (>=) → Retorna true se o primeiro valor for maior ou igual ao segundo.
+console.log(10 >= 10); // true
+
+✅ Menor ou igual (<=) → Retorna true se o primeiro valor for menor ou igual ao segundo.
+console.log(5 <= 10); // true
+
+✅ Igual (==) → Compara valores, mas não verifica o tipo.
+console.log(5 == "5"); // true (conversão automática)
+
+✅ Diferente (!=) → Retorna true se os valores forem diferentes.
+console.log(5 != "10"); // true
+
+🔹 2. Operadores de Identidade (=== e !==)
+Os operadores de identidade verificam valor e tipo, garantindo comparações mais precisas.
+
+✅ Igualdade estrita (===) → Retorna true apenas se os valores e tipos forem iguais.
+console.log(5 === "5"); // false (tipos diferentes)
+console.log(5 === 5); // true
+
+✅ Diferença estrita (!==) → Retorna true se os valores ou tipos forem diferentes.
+console.log(5 !== "5"); // true
+console.log(5 !== 5); // false
+
+🔹 Dica: Sempre prefira === e !== para evitar problemas de conversão automática.
+
+🔹 3. Operadores Lógicos
+Os operadores lógicos combinam expressões booleanas para criar condições mais complexas.
+
+✅ E lógico (&&) → Retorna true se ambas as condições forem verdadeiras.
+console.log(true && false); // false
+console.log(10 > 5 && 8 < 12); // true
+
+✅ OU lógico (||) → Retorna true se pelo menos uma condição for verdadeira.
+console.log(true || false); // true
+console.log(10 > 5 || 8 > 12); // true
+
+✅ Negação lógica (!) → Inverte o valor booleano.
+console.log(!true); // false
+console.log(!false); // true
+
+🔹 4. Operador Ternário (? :)
+O operador ternário é uma forma compacta de escrever condicionais if-else.
+
+✅ Sintaxe:
+condição ? valor_se_verdadeiro : valor_se_falso;
+
+✅ Exemplo:
+let idade = 18;
+let mensagem = idade >= 18 ? "Maior de idade" : "Menor de idade";
+console.log(mensagem); // "Maior de idade"
+
+🔹 Dica: Use o operador ternário para simplificar verificações rápidas.
+
+🔹 5. Ordem de Precedência dos Operadores
+A ordem de execução dos operadores segue regras matemáticas:
+
+1️⃣ Parênteses → () 2️⃣ Exponenciação → ** 3️⃣ Multiplicação, Divisão e Módulo → * / % 4️⃣ Adição e Subtração → + - 5️⃣ Operadores Relacionais → > < >= <= 6️⃣ Operadores de Igualdade → == != === !== 7️⃣ Operadores Lógicos → && || ! 8️⃣ Operador Ternário → ? :
+
+✅ Exemplo de precedência:
+let resultado = 10 + 5 * 2;
+console.log(resultado); // 20 (Multiplicação ocorre primeiro)
+
+✅ Usando parênteses para alterar a ordem:
+let resultado = (10 + 5) * 2;
+console.log(resultado); // 30 (Soma ocorre primeiro)
+
 -------------------------------------------------
 -------------------------------------------
 -------------------------------------------------
@@ -466,6 +543,88 @@ if (numero % 2 === 0) {
 }
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!
+Aula 8 – Operadores (Parte 2)
+
+📌 Aula 8 – Operadores (Parte 2)
+Os operadores em JavaScript permitem realizar comparações e tomar decisões dentro do código. Aqui estão os principais tipos:
+
+🔹 1. Operadores Relacionais
+Os operadores relacionais são usados para comparar dois valores e retornam um resultado booleano (true ou false).
+
+✅ Maior que (>) → Retorna true se o primeiro valor for maior que o segundo.
+console.log(10 > 5); // true
+
+✅ Menor que (<) → Retorna true se o primeiro valor for menor que o segundo.
+console.log(10 < 5); // false
+
+✅ Maior ou igual (>=) → Retorna true se o primeiro valor for maior ou igual ao segundo.
+console.log(10 >= 10); // true
+
+✅ Menor ou igual (<=) → Retorna true se o primeiro valor for menor ou igual ao segundo.
+console.log(5 <= 10); // true
+
+✅ Igual (==) → Compara valores, mas não verifica o tipo.
+console.log(5 == "5"); // true (conversão automática)
+
+✅ Diferente (!=) → Retorna true se os valores forem diferentes.
+console.log(5 != "10"); // true
+
+🔹 2. Operadores de Identidade (=== e !==)
+Os operadores de identidade verificam valor e tipo, garantindo comparações mais precisas.
+
+✅ Igualdade estrita (===) → Retorna true apenas se os valores e tipos forem iguais.
+console.log(5 === "5"); // false (tipos diferentes)
+console.log(5 === 5); // true
+
+✅ Diferença estrita (!==) → Retorna true se os valores ou tipos forem diferentes.
+console.log(5 !== "5"); // true
+console.log(5 !== 5); // false
+
+🔹 Dica: Sempre prefira === e !== para evitar problemas de conversão automática.
+
+🔹 3. Operadores Lógicos
+Os operadores lógicos combinam expressões booleanas para criar condições mais complexas.
+
+✅ E lógico (&&) → Retorna true se ambas as condições forem verdadeiras.
+console.log(true && false); // false
+console.log(10 > 5 && 8 < 12); // true
+
+✅ OU lógico (||) → Retorna true se pelo menos uma condição for verdadeira.
+console.log(true || false); // true
+console.log(10 > 5 || 8 > 12); // true
+
+✅ Negação lógica (!) → Inverte o valor booleano.
+console.log(!true); // false
+console.log(!false); // true
+
+🔹 4. Operador Ternário (? :)
+O operador ternário é uma forma compacta de escrever condicionais if-else.
+
+✅ Sintaxe:
+condição ? valor_se_verdadeiro : valor_se_falso;
+
+✅ Exemplo:
+let idade = 18;
+let mensagem = idade >= 18 ? "Maior de idade" : "Menor de idade";
+console.log(mensagem); // "Maior de idade"
+
+🔹 Dica: Use o operador ternário para simplificar verificações rápidas.
+
+🔹 5. Ordem de Precedência dos Operadores
+A ordem de execução dos operadores segue regras matemáticas:
+
+1️⃣ Parênteses → () 2️⃣ Exponenciação → ** 3️⃣ Multiplicação, Divisão e Módulo → * / % 4️⃣ Adição e Subtração → + - 5️⃣ Operadores Relacionais → > < >= <= 6️⃣ Operadores de Igualdade → == != === !== 7️⃣ Operadores Lógicos → && || ! 8️⃣ Operador Ternário → ? :
+
+✅ Exemplo de precedência:
+let resultado = 10 + 5 * 2;
+console.log(resultado); // 20 (Multiplicação ocorre primeiro)
+
+✅ Usando parênteses para alterar a ordem:
+let resultado = (10 + 5) * 2;
+console.log(resultado); // 30 (Soma ocorre primeiro)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!
+Módulo C: Entendendo o DOM
 
 
 
