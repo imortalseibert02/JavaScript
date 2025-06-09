@@ -717,18 +717,86 @@ document.getElementById("titulo").style.color = "green";
 document.getElementById("titulo").addEventListener("click", function() {
   alert("Título clicado!");
 });
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!
+Aula 10 – Eventos DOM  
 
+Para melhores exemplos, acesse os arquivos JavaScript\aula006\ex006eventos_dom.html
+JavaScript\aula006\ex007somando_valores.html
 
+🔹 O que são eventos no DOM?
+Eventos representam qualquer ação ou ocorrência que pode ser detectada no navegador. Exemplos incluem:
 
+Um clique em um botão
 
+A rolagem da página
 
+A digitação em um campo de entrada
 
+O DOM fornece métodos para capturar e executar ações quando esses eventos ocorrem.
 
+🔹 Principais Tipos de Eventos
+1️⃣ Eventos de Mouse
+click → Quando o usuário clica em um elemento.
 
+dblclick → Quando o usuário faz um clique duplo.
 
+mouseover → Quando o mouse passa sobre um elemento.
 
+mouseout → Quando o mouse sai de um elemento.
 
+2️⃣ Eventos de Teclado
+keydown → Quando uma tecla é pressionada.
 
+keyup → Quando uma tecla é liberada.
+
+keypress → Quando uma tecla é pressionada (obsoleto em alguns navegadores).
+
+3️⃣ Eventos de Formulário
+focus → Quando um campo recebe foco.
+
+blur → Quando um campo perde o foco.
+
+change → Quando o valor de um campo de entrada é alterado.
+
+submit → Quando um formulário é enviado.
+
+4️⃣ Eventos da Janela
+load → Quando a página é totalmente carregada.
+
+resize → Quando a janela do navegador é redimensionada.
+
+scroll → Quando o usuário rola a página.
+
+🔹 Como Capturar Eventos com JavaScript
+A captura de eventos no DOM pode ser feita usando o método addEventListener(), que permite definir uma função de callback para ser executada quando o evento ocorre.
+
+Exemplo: Capturar um clique em um botão
+javascript
+document.getElementById("meuBotao").addEventListener("click", function() {
+    alert("Botão clicado!");
+});
+📌 Esse código adiciona um evento ao botão com id "meuBotao", que exibe um alerta quando o botão é clicado.
+
+🔹 Event Object (event)
+O objeto event permite acessar propriedades do evento ocorrido. Por exemplo:
+
+document.addEventListener("keydown", function(event) {
+    console.log("Tecla pressionada: " + event.key);
+});
+✅ Aqui, event.key retorna a tecla que foi pressionada.
+
+🔹 Removendo Eventos
+Caso seja necessário remover um evento, usa-se removeEventListener():
+
+javascript
+function minhaFuncao() {
+    console.log("Evento ativado!");
+}
+
+document.getElementById("meuBotao").addEventListener("click", minhaFuncao);
+document.getElementById("meuBotao").removeEventListener("click", minhaFuncao);
+⚠️ O evento só pode ser removido se a função for referenciada pelo nome (não pode ser uma função anônima).
 
 
 
