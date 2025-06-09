@@ -10,38 +10,58 @@
             color: brown;
             background-color: rgb(255, 220, 174);
             font-family: Arial, Helvetica, sans-serif;
-line-height: 2rem;
+            line-height: 2rem;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <!-- me explique por completo sobre o DOM, arvore dom, seletores por marca, id, nome,classe, seletor.  -->
+
     <h1>testando o live server</h1>
     <p>Aqui vai o resultado</p>
-    <p>aprendendo a usar <strong>DOM</strong> em javascript</p>
-    <div id="titulo">clique em mim</div>
+    <p id="msg">aprendendo a usar <strong>DOM</strong> em javascript</p>
+    <div class="titulo">clique em mim</div>
+    <div class="exemplo1">gremio</div>
+    <div class="exemplo2">inter</div>
+    <div class="exemplo3">palmeiras</div>
+    <div class="exemplo2">flamengo</div>
     <script>
 
-//         var p1 = window.document.getElementsByTagName("p")[1]
-//         document.write(p1.innerHTML)
+        //         var p1 = window.document.getElementsByTagName("p")[1]
+        //         document.write(p1.innerHTML)
 
-// document.write('<br>')
+        // document.write('<br>')
 
-// var d = window.document.getElementById('msg')
-// document.write(d.innerHTML)
+        var d = window.document.getElementById('msg')
+        document.write(d.innerHTML)
 
-// document.write('<br>')
+        // document.write('<br>')
 
-// d.style.color = 'blue'
-// d.style.backgroundColor = 'black'
+        d.style.color = 'blue'
+        //  d.style.backgroundColor = 'black'
 
-// document.write('<br>')
+        // document.write('<br>')
 
-document.getElementById("titulo").addEventListener("click", function() {
-  alert("Título clicado!");
+        // document.getElementById("titulo").addEventListener("click", function() {
+        //   alert("Título clicado!");
+        // });
+
+        var ex1 = window.document.querySelector('div.exemplo1')
+        ex1.style.color = 'blue'
+        ex1.style.backgroundColor = 'black'
+        
+     var ex2 = document.querySelectorAll(".exemplo2");
+ex2.forEach(function(elemento) {
+    elemento.style.backgroundColor = 'red';
+    elemento.style.color = 'white';
 });
 
+        var ex3 = window.document.querySelector('div.exemplo3')
+        ex3.style.backgroundColor = 'green'
+        ex3.style.color = 'white'
+
+var ex4 = document.querySelector('div.exemplo4')
     </script>
 </body>
 
