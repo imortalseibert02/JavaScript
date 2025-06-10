@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
+        body{
+            height: 200vh;
+        }
         .area {
             color: brown;
             background-color: rgb(255, 220, 174);
@@ -21,21 +24,31 @@
 
 <body>
 
-    <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" >
         Interaja...</div>
     <!-- 
         pode-se colocar os eventos na mesma linha de codigo como o exemplo acima, ou pode-se colocar dentro do script
          -->
+
+
     <script>
         var area = document.querySelector('.area')
         area.addEventListener('click', clicar)
         area.addEventListener('mouseenter', entrar)
         area.addEventListener('mouseout', sair)
+        area.addEventListener('dblclick', resetar)
+     
 
         function clicar() {
             area.innerText = 'Clicou...'
             area.style.backgroundColor = 'lightblue'
             area.style.color = 'white'
+        }
+
+        function resetar () {
+            area.innerText = 'Interaja...'
+            area.style.backgroundColor = 'rgb(255, 220, 174)'
+            area.style.color = 'brown'
         }
 
         function entrar() {

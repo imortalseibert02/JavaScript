@@ -721,6 +721,8 @@ document.getElementById("titulo").addEventListener("click", function() {
 !!!!!!!!!!!!!!!!!!!!!!!!
 Aula 10 – Eventos DOM  
 
+Event Reference
+
 Para melhores exemplos, acesse os arquivos JavaScript\aula006\ex006eventos_dom.html
 JavaScript\aula006\ex007somando_valores.html
 
@@ -797,7 +799,92 @@ function minhaFuncao() {
 document.getElementById("meuBotao").addEventListener("click", minhaFuncao);
 document.getElementById("meuBotao").removeEventListener("click", minhaFuncao);
 ⚠️ O evento só pode ser removido se a função for referenciada pelo nome (não pode ser uma função anônima).
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Módulo D: Condições em JavaScript
 
+✅ Condições em JavaScript
+Em programação, as condições são utilizadas para tomar decisões com base em determinados critérios. No JavaScript, temos quatro tipos principais de condições:
+
+Simples (if)
+
+Compostas (if...else)
+
+Aninhadas (if...else if...else)
+
+Múltiplas (switch)
+
+1️⃣ Condições Simples (if)
+A condição simples verifica uma única expressão lógica. Se a condição for verdadeira, o bloco de código dentro do if é executado.
+
+Exemplo de Condição Simples
+javascript
+let idade = 18;
+
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+}
+💡 Detalhe: Se a variável idade for 18 ou maior, a mensagem "Você é maior de idade." será exibida.
+
+2️⃣ Condições Compostas (if...else)
+A condição composta permite tratar duas possibilidades:
+
+Verdadeiro: Executa um bloco de código quando a condição é satisfeita.
+
+Falso: Executa outro bloco de código quando a condição não é satisfeita.
+
+Exemplo de Condição Composta
+javascript
+let idade = 16;
+
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+} else {
+    console.log("Você é menor de idade.");
+}
+💡 Detalhe: Se idade for inferior a 18, o código dentro do else é executado, mostrando "Você é menor de idade."
+
+3️⃣ Condições Aninhadas (if...else if...else)
+Utiliza-se condições aninhadas quando há várias verificações em sequência. O código testa uma condição após a outra até encontrar a correspondente verdadeira e, em seguida, executa o bloco associado.
+
+Exemplo de Condição Aninhada
+javascript
+let nota = 85;
+
+if (nota >= 90) {
+    console.log("Parabéns, você tirou A!");
+} else if (nota >= 80) {
+    console.log("Bom trabalho, você tirou B!");
+} else if (nota >= 70) {
+    console.log("Você tirou C!");
+} else {
+    console.log("Você precisa estudar mais.");
+}
+💡 Detalhe:
+
+Se a nota for 85, a segunda condição (nota >= 80) é satisfeita, exibindo "Bom trabalho, você tirou B!".
+
+Cada teste é realizado sequencialmente até encontrar a condição correta.
+
+4️⃣ Condições Múltiplas (switch)
+O switch é ideal para situações com muitas opções específicas. Ele compara o valor de uma variável com diferentes casos (case) e executa o bloco de código correspondente.
+
+Exemplo de Condição Múltipla
+javascript
+let dia = "terça";
+
+switch (dia) {
+    case "segunda":
+        console.log("Hoje é segunda-feira.");
+        break;
+    case "terça":
+        console.log("Hoje é terça-feira.");
+        break;
+    case "quarta":
+        console.log("Hoje é quarta-feira.");
+        break;
+    default:
+        console.log("Dia não reconhecido.");
+}
 
 
 
