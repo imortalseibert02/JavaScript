@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+
+<body>
+
+
+
+    <!--h1>Sistema de Multas</h1>
+      Velocidade do carro <input type="number" name="txtvel" id="txtvel"> Km/h
+
+    <input type="button" value="Verificar" onclick="calcular()"> 
+
+     <div id="res">
+
+    </div>    (ATIVIDADE DE VERIFICAR VELOCIDADE IF ELSE, USANDO O PROMPT, E    VERIFICANDO)
+
+    <script>
+        var janela = Number(window.prompt('Digite um numero'))
+
+        // function calcular() {
+        //     var txtv = document.querySelector('janela')
+        //     var res = document.querySelector('#res')
+            
+        //     res.innerHTML = `<p>Sua velocidade é de <strong>${janela}</strong> Km/h</p>`
+
+        //     var multa = janela * 2
+
+        //     if (janela > 60) {
+        //         res.innerHTML += `<p><strong>MULTADO</strong> por estar acima da velocidade permitida.</p>`
+
+        //         res.innerHTML += `<p> Tens de pagar ${multa} R$ para o governo.</p>`
+
+        //     } else {
+        //         res.innerHTML += '<p>Tenha uma boa viagem</p>'
+        //     }
+        //     res.innerHTML += 'Lembre-se de usar o cinto de segurança.'
+        // } 
+    </script>-->
+
+    <!-- <h1>Sistema de Multas</h1> (ATIVIDADE DE VELOCIDADE, DIRETO DO PROMPT VEM A RESPOSTA)
+    <div class="res"></div>
+
+    <script>
+        var janela = Number(window.prompt('Passou a quantos Km/h ?'))
+        var res = document.querySelector('.res')
+
+
+        if (janela > 60) {
+            var multa = janela * 2
+
+            res.innerHTML = `<p><strong>MULTADO</strong> por estar acima da velocidade permitida.</p>`
+            res.innerHTML += `<p> Tens de pagar ${multa} R$ para o governo.</p>`
+        } else {
+            res.innerHTML = 'Use o cinto de segurança e boa viagem !'
+        }
+    </script> -->
+</body>
+
+</html>
