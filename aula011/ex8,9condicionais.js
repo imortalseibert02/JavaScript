@@ -8,10 +8,10 @@
 //-------------------------
 
 // CONDICIONAIS IF ELSE
-var pais = 'brasil'
-console.log(`Vivo no ${pais}`)
-if (pais == 'brasil') {
-    console.log('Vivo na minha terra natal')
-} else {
-    console.log ('Vivo em uma terra estrangeira')
-}
+// var pais = 'brasil'
+// console.log(`Vivo no ${pais}`)
+// if (pais == 'brasil') {
+//     console.log('Vivo na minha terra natal')
+// } else {
+//     console.log ('Vivo em uma terra estrangeira')
+// }
