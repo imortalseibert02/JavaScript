@@ -7,31 +7,35 @@
     <title>condicionais multiplas</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif
-            ;
+            font-family: Arial, Helvetica, sans-serif;
             height: 96vh;
             text-align: center;
             background-image: linear-gradient(to bottom, green, darkgreen);
         }
-        button{
+
+        button {
             padding: 10px;
             color: white;
             background-color: black;
             font-weight: bold;
             letter-spacing: 2px;
         }
-        button:hover{
+
+        button:hover {
             color: black;
             background-color: white;
             font-weight: bold;
         }
-        h1{
+
+        h1 {
             margin-bottom: 30px;
         }
-        div.res{
+
+        div.res {
             margin-bottom: 10px;
         }
-        div.botoes{
+
+        div.botoes {
             display: none;
         }
     </style>
@@ -52,30 +56,37 @@
 
 </html>
 
-  <script>
-    var res = document.querySelector('.res')
-    var botoes = document.querySelector('.botoes')
-    var nome = window.prompt('Qual o seu nome ?')
-    var idade = Number(window.prompt('Qual a sua idade ?'))
-    var servir = window.prompt('Quer servir ao exército ?')
+<script>
+    var res = document.querySelector('.res');
+    var botoes = document.querySelector('.botoes');
+    var nome = window.prompt('Qual o seu nome ?');
+    var idade = Number(window.prompt(`${nome}, qual a sua idade ?`));
+    var falta = 18 - idade;
 
-    if (servir.toLowerCase() == 'sim') {
-        res.innerHTML = '<strong>Em qual arma deseja servir ?</strong>'
-        botoes.style.display = 'block'
-
-        var opcoes = botoes.querySelectorAll('button');
-    opcoes.forEach(function(botao) {
-        botao.addEventListener('click', function() {
-            res.innerHTML = `<strong>Você escolheu: ${this.textContent}. Boa sorte, ${nome}!</strong>`;
-            botoes.style.display = 'none';
-        });
-    });
-    } 
+    if (idade >= 18) {
+        var servir = window.prompt('Quer servir ao exército ?');
+        if (servir.toLowerCase() == 'sim') {
+            res.innerHTML = '<strong>Em qual arma deseja servir ?</strong>'
+            botoes.style.display = 'block'
     
-    else {
-        res.innerHTML = '<strong>Tenha um ótimo dia !</strong>'
-        botoes.style.display = 'none'
+            var opcoes = botoes.querySelectorAll('button');
+            opcoes.forEach(function (botao) {
+                botao.addEventListener('click', function () {
+                    res.innerHTML = `<strong>Você escolheu: ${this.textContent}. Boa sorte, ${nome}!</strong>`;
+                    botoes.style.display = 'none';
+                });
+            });
+        }
+    
+        else {
+            res.innerHTML = '<strong>Tenha um ótimo dia !</strong>'
+            botoes.style.display = 'none'
+        }
+    } else {
+        res.innerHTML = `<strong>${nome}, você ainda não tem idade suficiente para se alistar. Faltam ${falta} ano(s) para o alistamento.</strong>`;
+        botoes.style.display = 'none';
     }
+
 
 
 </script>
